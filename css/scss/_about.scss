@@ -1,0 +1,324 @@
+.about-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+
+    .about-left-container {
+        margin-bottom: sizeX8(6);
+        margin-top: sizeX8(2);
+        margin-left: sizeX8(6);
+
+        @include desktop {
+            width: 300px;
+        }
+
+
+        header {
+            margin-right: sizeX8(2);
+            margin-bottom: sizeX8(4);
+    
+    
+        } // header end 
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            width: 40%;
+
+            @include tablet {
+                width: 25%;
+            }
+
+
+            .pagination-bars {
+                display: flex;
+                justify-content: space-between;
+                margin-right: sizeX8(2);
+                width: sizeX8(5);
+
+                @include desktop {
+                    display: none;
+                }
+    
+                .pagination-bar{
+                    width: 5px;
+                    height: fontSize(medium);
+                    background-color: black;
+
+                    @include tablet {
+                        height: fontSize(big);
+                    }
+        
+                }
+            } 
+
+            p {
+                margin: 0;
+                font-family: fontFamily(sanSerif);
+                font-size: fontSize(small);
+    
+                @include tablet {
+                    font-size: fontSize(medium);
+                }
+    
+                @include desktop {
+                    display: none;
+                }
+    
+            }
+    
+
+        }// .pagination-bars end 
+
+
+    } // .about-left-container end
+
+    .about-right-container {
+        margin: 0 sizeX8(2);
+        margin-bottom: sizeX8(2);
+
+        @include desktop {
+            margin-left: 0;
+            margin-top: 90px;
+            width: 800px;
+        }
+
+
+        // 共通するところ
+        p {
+            margin: 0;
+            line-height: 1.6em;
+        }
+
+        .each-container {
+            margin-bottom: sizeX8(5);
+        }
+
+        .about-title {
+            font-family: fontFamily(cursive);
+            font-size: fontSize(big);
+            margin: 0;
+            margin-left: sizeX8(4);
+            margin-bottom: sizeX8(2);
+
+            @include tablet {
+                font-size: fontSize(large);
+            }
+
+            @include desktop {
+                font-size: fontSize(superlarge);
+                margin-right: sizeX8(4);
+                margin-bottom: 0;
+            }
+        }
+
+        .about-image {
+            margin-bottom: sizeX8(3);
+        }
+
+        .about-contents {
+            font-family: fontFamily(serif);
+            font-size: fontSize(small);
+            line-height: 1.7em;
+            margin-bottom: sizeX8(3);
+
+            @include tablet {
+                font-size: fontSize(medium);
+            }
+
+        } //共通するところ end
+
+
+        .intro-container {
+
+            .intro-title {
+                margin-left: sizeX8(4);
+                margin-bottom: sizeX8(4);
+                font-size: fontSize(medium);
+                font-family: fontFamily(sanSerif);
+                line-height: 1.4em;
+
+
+
+                .title-Japanese {
+                    margin: 0;
+                    width: 100%;
+                    margin-bottom: sizeX8(1);
+
+                    @include tablet {
+                        font-size: fontSize(big);
+                    }
+                }
+
+                .title-English {
+                    margin: 0;
+                    font-size: fontSize(small);
+
+                    @include tablet {
+                        font-size: fontSize(medium);
+                    }
+                }
+            } // intro-title end
+
+            .intro-dscrptn {
+                margin-bottom: sizeX8(4);
+
+                @include desktop {
+                    margin-left: 240px;
+                }
+            }
+
+            .intro-image {
+                width: 100%;
+
+                .intro-image-single {
+                    width: 100%;
+                    padding-top: 52.5%;
+                    margin-bottom: sizeX8(2);
+
+                }
+            }
+        } // intro-container end
+
+
+        .profile-container {
+
+            @include desktop {
+                display: grid;
+                grid-template-columns: 240px 220px max-content;
+
+            }
+
+            .profile-image {
+                width: 100%;
+                height: 80%;
+                overflow: hidden;
+
+                @include desktop {
+                    width: 100%;
+                    // height: 100%;
+                }
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+
+            .profile-contents {
+
+                @include desktop {
+                    margin-left: sizeX8(4);
+                }
+                .profile-name {
+                    width: max-content;
+                    margin-left: sizeX8(4);
+                    display: grid;
+                    grid-template-columns: max-content 1fr;
+                    grid-template-rows: 1fr max-content;
+                    align-items: center;
+
+                    @include desktop {
+                        margin-left: 0;
+                    }
+
+                    .position {
+                        grid-area: 1 / 1 / 2 / 2;
+                        font-size: fontSize(small);
+                        margin-right: sizeX8(2);
+                    }
+
+                    .name-Japanese {
+                        font-size: fontSize(medium);
+                    }
+
+                    .name-English {
+                        grid-area: 2 / 2 / 3 / 3;
+                    }    
+                }
+
+                .profile-historys {
+
+                    @include desktop {
+                        margin-bottom: 0;
+                    }
+
+                    .history {
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: sizeX8(1);
+
+                        .history-year {
+                            margin-right: sizeX8(2);
+                        }
+                    }
+                }
+
+
+            } // .profile-contents
+        } // profile-container
+
+        .all-awards-container{
+
+            @include desktop {
+                display: grid;
+                grid-template-columns: 240px max-content;
+            }
+
+            .awards-container{
+                .award-container{
+                    display: grid;
+                    grid-template-columns: max-content 1fr;
+                    margin-bottom: sizeX8(1);
+                    
+                    .award-year{
+                        margin-right: sizeX8(2);
+                    }
+                }
+            }
+        } //all awards container
+
+        .office-container {
+
+            @include desktop {
+                display: grid;
+                grid-template-columns: 240px max-content;
+            }
+
+            .office-info-each {
+                display: grid;
+                grid-template-columns: 20% 1fr;
+                margin-bottom: sizeX8(1);
+            }
+        } // ofice-container
+
+        .map-container {
+            height: 225px;
+
+            @include tablet {
+                height: 325px;
+            }
+
+            @include desktop {
+                height:425px;
+            }
+                .google-map {
+                    width: 100%;
+                    height: 100%;
+                }
+            
+        }
+
+    } // about-right-container end
+
+
+
+} // about-wrapper end

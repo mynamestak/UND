@@ -1,0 +1,255 @@
+.service-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+
+    .service-left-container {
+        margin-bottom: sizeX8(6);
+        margin-top: sizeX8(2);
+        margin-left: sizeX8(6);
+
+        @include desktop {
+            width: 300px;
+        }
+
+
+        header {
+            margin-right: sizeX8(2);
+            margin-bottom: sizeX8(4);
+    
+    
+        } // header end 
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            width: 40%;
+
+            @include tablet {
+                width: 25%;
+            }
+
+
+            .pagination-bars {
+                display: flex;
+                justify-content: space-between;
+                margin-right: sizeX8(2);
+                width: sizeX8(5);
+
+                @include desktop {
+                    display: none;
+                }
+    
+                .pagination-bar{
+                    width: 5px;
+                    height: fontSize(medium);
+                    background-color: black;
+
+                    @include tablet {
+                        height: fontSize(big);
+                    }
+        
+                }
+            } 
+
+            p {
+                margin: 0;
+                font-family: fontFamily(sanSerif);
+                font-size: fontSize(small);
+    
+                @include tablet {
+                    font-size: fontSize(medium);
+                }
+    
+                @include desktop {
+                    display: none;
+                }
+    
+            }
+    
+
+        }// .service-bars end 
+
+
+    } // .service-left-container end
+
+    .service-right-container {
+        margin-left: sizeX8(2);
+        margin-right: sizeX8(2);
+
+        @include desktop {
+            margin-left: 0;
+            margin-top: 90px;
+            width: 800px;
+        }
+
+
+        .all-service {
+            .single-service{
+                margin-bottom: sizeX8(4);
+            
+                p {
+                    margin: 0;
+                }
+
+                @include desktop {
+                    display: flex;
+                    flex-direction: row; 
+                    margin-bottom: 0;
+                }
+
+                .service-titles {
+                    font-family: fontFamily(sanSerif);
+                    font-size: fontSize(small);
+                    border-bottom: 4px solid black;
+                    padding-bottom: sizeX8(1);
+                    margin-bottom: sizeX8(2);
+
+                    @include tablet {
+                        font-size: fontSize(medium);
+                    }
+
+                    @include desktop {
+                        width: 190px;
+                        padding-right: sizeX8(2); 
+                        margin-right: sizeX8(2);
+                        text-align: right;
+                        border-right: 4px solid black;
+                        border-bottom: 0;
+                        margin-bottom: 0;
+
+                    }
+
+                    p {
+                        line-height: 1.2em;
+                    }
+                }
+
+                hr {
+                    height: 3px;
+                    background-color: black;
+
+                    @include desktop {
+                        margin-right: 16px;
+                    }
+                }
+
+                .service-contents {
+                    font-family: fontFamily(serif);
+                    font-size: fontSize(small);
+
+                    @include tablet {
+                        font-size: fontSize(medium);
+                    }
+
+                    @include desktop {
+                        width: 610px;
+                        margin-bottom: sizeX8(8);
+                    }
+
+
+                    p {
+                        line-height: 1.6em;
+                    }
+                }
+            }
+        } //all service container end
+
+        .extra-service-container {
+            margin-left: sizeX8(4);
+            margin-bottom: sizeX8(4);
+
+            @include desktop {
+                margin-left: 222px;
+            }
+
+            .single-service {
+
+                @include desktop {
+                    margin-top: sizeX8(8);
+                }
+
+
+                .service-titles {
+                    font-family: fontFamily(sanSerif);
+                    font-size: fontSize(small);
+
+                    @include tablet {
+                        font-size: fontSize(medium);
+                    }
+
+                    @include desktop {
+                        margin-bottom: sizeX8(3);
+                    }
+
+                    p {
+                        line-height: 1.2em;
+                    }
+                }
+
+                .service-contents {
+                    font-family: fontFamily(serif);
+                    font-size: fontSize(small);
+
+                    @include tablet {
+                        font-size: fontSize(medium);
+                    }
+
+
+                    p {
+                        line-height: 1.6em;
+                    }
+                }
+            } // single service end
+        } // extra service container end
+
+        .contact-btn-container {
+            width: 100%;
+            height: sizeX8(10);
+            background-color: black;
+            cursor: pointer;
+
+            @include tablet {
+                width: 60%;
+            }
+
+            @include desktop {
+                margin-left: 222px;
+            }
+            
+
+            .contact-btn {
+                text-transform: none;
+                color: black;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            
+
+
+                p {
+                    font-family: fontFamily(sanSerif);
+                    font-size: fontSize(medium);
+                    color: white;  
+                    vertical-align: middle;
+                    margin: 0;
+
+
+
+                }
+            }
+        }
+    } // service right container end
+} // service wrapper end

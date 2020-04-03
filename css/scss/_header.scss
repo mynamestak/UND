@@ -1,0 +1,161 @@
+      
+      header {
+            margin-bottom: sizeX8(10);
+            display: flex;
+            justify-content: space-between;
+
+            @include desktop {
+                margin: 0;
+                position: relative;
+            }
+
+            .title{
+                font-family: fontFamily(serif);
+                font-size: fontSize(medium);
+                display: flex;
+                align-items: center;
+
+                @include desktop {
+                    margin-bottom: sizeX8(3);
+                }
+
+                p {
+                    margin: 0;
+                    font-size: fontSize(big);
+
+                    @include tablet {
+                        font-size: fontSize(large);
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+
+            .nav-cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: white;
+                width: 100vw;
+                height: 100%;
+                z-index: 10;
+                transform: translateX(100%);
+                // opacity: 0;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+        
+                .nav-menus {
+                    margin: 0;
+                    position: absolute;
+                    left: sizeX8(6);
+                    bottom: 70px;
+                    list-style: none;
+                    padding: 0;
+                    transform: translateX(-200%);
+                    opacity: 0;
+                    z-index: 10;
+
+                    @include tablet {
+                        bottom: 210px;
+                    }
+
+                    @include desktop {
+                        display: unset;
+                        top: 74px;
+                        left: 0;
+                    }
+                    
+                    .nav-menu {
+                        font-family: fontFamily(sanSerif);
+                        font-size: fontSize(medium);
+                        margin-bottom: 20px;
+                        cursor: pointer;
+
+                        @include tablet {
+                            font-size: fontSize(big);
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                } 
+                // nav-menus end
+            
+        
+
+
+            } 
+            // nav end
+
+            .hamburger {
+                height: fontSize(big);
+                padding: 0;
+                margin: 0; 
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                z-index: 100;
+                
+                @include desktop {
+                    display: none;
+                }
+
+                .line {
+                    width: 33px;
+                    height: 3px;
+                    background-color: black;
+                    list-style: none;
+                }
+
+                .line-1 {
+                    transition: transform 0.5s ease-in-out;
+                    transform-origin: center left;
+
+                }
+
+                .line-2 {
+                    transition: transform 0.5s ease-in-out;
+
+                }
+
+                .line-3 {
+                    transition: transform 0.5s ease-in-out;
+                    transform-origin: center left;
+
+                }
+
+                .line-1_active {
+                    transform: rotate(45deg) translate(-1px, 1px);
+                    transform-origin: center left;
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                .line-2_active {
+                    opacity: 0;
+                    transition: transform 0.5s ease-in-out;
+
+                }
+
+                .line-3_active {
+                    transform: rotate(-45deg) translate(-1px, -1px);
+                    transform-origin: center left;
+                    transition: transform 0.5s ease-in-out;
+
+                }
+            
+            } //hamburger end
+
+        } // header end
+
+        .nav-active {
+            height: 100vh;
+        }

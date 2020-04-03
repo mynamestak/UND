@@ -1,0 +1,51 @@
+// marginの値、$numberに入れた数 * 8をreturnするようにしてある。
+@function sizeX8($number){
+    @return ($number * 8) + px;
+}
+//全てのmargin値など分かり次第、やり方変更。
+
+
+// とりあえずのフォントファミリー
+$fontfamily:(
+    sanSerif: Helvetica,
+    serif: Georgia,
+    cursive: cursive,
+
+);
+
+// とりあえずのフォントサイズ
+$fontSize: (
+    superlarge: 60px,
+    large: 44px,
+    big: 26px,
+    medium: 18px,
+    small: 14px,
+    supersmall: 9px
+);
+
+
+@function fontFamily($fontFamilyKind){
+    @return map-get($fontfamily, $fontFamilyKind);
+}
+
+@function fontSize($fontSizeKind){
+    @return map-get($fontSize, $fontSizeKind);
+}
+
+
+// responsiveサイズ
+$tablet: 768px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}){
+        @content;
+    }
+}
+
+$desktop: 1028px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}

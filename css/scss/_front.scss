@@ -1,0 +1,159 @@
+.front-wrapper {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+
+    @include desktop {
+        display: flex;
+    }
+
+    .front-left-container{
+        margin-top: sizeX8(2);
+        margin-left: sizeX8(6);
+        margin-right: sizeX8(2);
+        margin-bottom: sizeX8(6);
+
+        @include desktop {
+            position: relative;
+            width: 50%;
+            margin: 0;
+            height: 100vh; 
+            padding: sizeX8(6) sizeX8(3);
+            box-sizing: border-box;
+        }
+
+        .house-name-wrapper {
+
+            @include desktop {
+                position: absolute;
+                top: 70%;
+                right: sizeX8(3);
+            }
+
+            .handwriting-name-container {
+                max-width: 100%;
+                margin-bottom: 10px;
+                height: fontSize(medium);
+                overflow: hidden; 
+
+                @include tablet {
+                    height: fontSize(superlarge);
+                }
+
+                .handwriting-names {
+                    display: grid;
+                    grid: column;
+                    gap: 20px;
+
+                    @include desktop {
+                        text-align: end;
+                    }
+
+                    p {
+                        font-size: fontSize(medium);
+                        text-transform: capitalize;
+                        font-family: fontFamily(cursive);
+                        margin: 0;
+
+                        @include tablet {
+                            font-size: fontSize(large);
+                        }
+                    }
+                }
+            } // handwriting-name-container end
+
+            .kanji-name-container {
+                max-width: 100%;
+                height: fontSize(small);
+                overflow: hidden; 
+
+                @include tablet {
+                    height: fontSize(big);
+                }
+
+                .kanji-names {
+                    display: grid;
+                    gap: 20px;
+
+                    @include desktop {
+                        text-align: end;
+                    }
+
+
+                    p {
+                        font-size: fontSize(small);
+                        text-transform: capitalize;
+                        margin: 0;
+
+                        @include tablet {
+                            font-size: fontSize(big);
+                        }
+                    }
+                }
+
+            } // kanji-name-container end
+
+        } //house-name-wrapper end
+
+        .page-circles {
+            position: absolute;
+            top: 85px;
+            right: sizeX8(2);
+            display: flex;
+            flex-direction: column;
+            height: 90px;
+            justify-content: space-between;
+
+            @include tablet {
+                top: 159px;
+            }
+
+            @include desktop {
+                position: absolute;;
+                right: sizeX8(3);
+                top: 122px;
+            }
+
+            
+
+            .page-circle {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                border: 2px solid red;
+
+            }
+        }
+
+    } // front-left-container end
+
+    .front-right-container {
+        width: 100vw;
+        height: calc(100vh - 227px);
+        overflow: hidden;
+
+        @include desktop {
+            width: 50%;
+            height: 100vh;
+        }
+
+        .house-images {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+
+            .house-image {
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    vertical-align: middle;
+                }
+            }
+
+        } // house-images
+    } //front-right-container
+
+
+} // front-wrapper

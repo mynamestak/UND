@@ -1,0 +1,138 @@
+.projects-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+
+    .projects-left-container {
+        margin-bottom: sizeX8(6);
+        margin-top: sizeX8(2);
+        margin-left: sizeX8(6);
+
+        @include desktop {
+            width: 300px;
+        }
+    
+
+        header {
+            margin-right: sizeX8(2);
+            margin-bottom: sizeX8(4);
+
+
+        } // header end 
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            width: 40%;
+
+            @include tablet {
+                width: 25%;
+            }
+
+
+            .pagination-bars {
+                display: flex;
+                width: sizeX8(5);
+                justify-content: space-between;
+                margin-right: sizeX8(2);
+
+
+                @include desktop {
+                    display: none;
+                }
+    
+                .pagination-bar{
+                    width: 5px;
+                    height: fontSize(medium);
+                    background-color: black;
+
+                    @include tablet {
+                        height: fontSize(big);
+                    }
+        
+                }
+            } // .pagination-bars end 
+
+            p {
+                margin: 0;
+                font-family: fontFamily(sanSerif);
+                font-size: fontSize(small);
+
+                @include tablet {
+                    font-size: fontSize(medium);
+                }
+
+                @include desktop {
+                    display: none;
+                }
+
+            }
+        } // pagination end 
+    }//project-left-container end
+    
+    .projects-right-container {
+        margin-left: sizeX8(6);
+        width: 100%;
+
+        @include desktop {
+            margin-left: 0;
+            margin-top: 90px;
+        }
+
+        .house-images {
+
+            .house-image {
+                display: block;
+                width: 100%;
+                height: max-content;
+                text-decoration: none;
+                margin-bottom: sizeX8(4);
+
+
+                .house-image-single {
+                    width: 100%;
+                    padding-top: 52.5%;
+                    margin-bottom: sizeX8(2);
+                }
+
+                .house-name-container {
+                    padding: 0;
+
+                    p {
+                        margin: 0;
+                        color: black;
+                    }
+
+                    .handwriting-name {
+                        margin-bottom: sizeX8(1);
+                        font-family: fontFamily(sanSerif);
+                        font-size: fontSize(small);
+
+                        @include tablet {
+                            font-size: fontSize(medium);
+                        }
+                    }
+
+                    .kanji-name {
+                        font-size: fontSize(small);
+                        font-family: fontFamily(serif);
+
+                        @include tablet {
+                            font-size: fontSize(medium);
+                        }
+                    }
+                } // .house-name-container end
+            } // house image end
+        } //house images end
+    }// projects-right-container end
+}//projects-wrapper end
+
